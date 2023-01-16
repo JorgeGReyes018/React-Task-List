@@ -6,7 +6,7 @@ import List from "./components/list/list";
 
 function App() {
   const [inputText, setInputText] = React.useState("");
-  const [tasks, setTasks] = React.useState([]);
+  const [todos, setTodos] = React.useState([]);
 
   return (
     <div className="App">
@@ -14,12 +14,7 @@ function App() {
         <h1>React Task List</h1>
       </header>
       <div>
-        <Form
-          inputText={inputText}
-          tasks={tasks}
-          setTasks={setTasks}
-          setInputText={setInputText}
-        />
+        <Form setInputText={setInputText} />
       </div>
       <div>
         <List />
