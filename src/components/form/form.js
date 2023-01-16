@@ -1,7 +1,13 @@
 import React from "react";
 import "./form.css";
 
-export default function Form({ inputText, setInputText, tasks, setTasks }) {
+export default function Form({
+  inputText,
+  setInputText,
+  tasks,
+  setTasks,
+  setStatus,
+}) {
   const inputTextHandler = (ev) => {
     console.log(ev.target.value);
     setInputText(ev.target.value);
@@ -16,7 +22,7 @@ export default function Form({ inputText, setInputText, tasks, setTasks }) {
   };
 
   const statusHandler = (ev) => {
-    console.log(ev.target.value);
+    setStatus(ev.target.value);
   };
   return (
     <form action="#" method="GET">

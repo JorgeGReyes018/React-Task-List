@@ -8,6 +8,21 @@ function App() {
   const [inputText, setInputText] = React.useState("");
   const [tasks, setTasks] = React.useState([]);
   const [status, setStatus] = React.useState("all");
+  const [filteredTasks, setFilteredTasks] = React.useState([]);
+
+  const filterHandler = () => {
+    switch (status) {
+      case "completed":
+        setFilteredTasks(tasks.filter((task) => task.completed === true));
+        break;
+      case "incomplete":
+        setFilteredTasks(tasks.filter((task) => task.completed === false));
+        break;
+      default:
+        setFilteredTasks(tasks);
+        break;
+    }
+  };
 
   return (
     <div className="App">
