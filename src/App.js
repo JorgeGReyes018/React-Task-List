@@ -22,7 +22,7 @@ function App() {
         />
       </div>
       <div>
-        <List tasks={tasks} />
+        <List setTasks={setTasks} tasks={tasks} />
       </div>
     </div>
   );
