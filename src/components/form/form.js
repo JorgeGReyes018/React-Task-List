@@ -1,22 +1,39 @@
 import React from "react";
 import "./form.css";
 
-export default function Form(props) {
+export default function Form({ inputText, setInputText, tasks, setTasks }) {
   const inputTextHandler = (ev) => {
-    props.setInputText(e.target.value);
+    console.log(ev.target.value);
+    setInputText(ev.target.value);
   };
-
+  const submitTaskHandler = (ev) => {
+    ev.preventDefault();
+    setTasks([
+      ...tasks,
+      { text: inputText, completed: false, id: Math.random() * 1000 },
+    ]);
+    setInputText("");
+  };
   return (
     <form action="#" method="GET">
       <h1>New Task</h1>
-      <input onChange={inputTextHandler} className="inputTask" type="text" />
+      <input
+        value={inputText}
+        onChange={inputTextHandler}
+        className="inputTask"
+        type="text"
+      />
       <div>
-        <button className="addTaskBtn" type="submit">
+        <button
+          onClick={submitTaskHandler}
+          className="addTaskBtn"
+          type="submit"
+        >
           Add Task
         </button>
       </div>
       <div className="select">
-        <select name="todos" className="todo-filter">
+        <select name="tasks" className="tasks-filter">
           <option value="all">All Tasks</option>
           <option value="completed">Completed Tasks</option>
           <option value="incomplete">Incomplete Tasks</option>
