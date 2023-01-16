@@ -1,4 +1,5 @@
 import React from "react";
+import "./task.css";
 
 export default function Task({ text, task, setTasks, tasks }) {
   const delHandler = () => {
@@ -19,7 +20,9 @@ export default function Task({ text, task, setTasks, tasks }) {
   };
   return (
     <div className="task">
-      <li className="taskItem">{text}</li>
+      <li className={`taskItem ${task.completed ? "completed" : ""}`}>
+        {text}
+      </li>
       <button onClick={doneHandler} className="doneBtn">
         Done
       </button>

@@ -7,6 +7,7 @@ import List from "./components/list/list";
 function App() {
   const [inputText, setInputText] = React.useState("");
   const [tasks, setTasks] = React.useState([]);
+  const [status, setStatus] = React.useState("all");
 
   return (
     <div className="App">
@@ -19,13 +20,11 @@ function App() {
           tasks={tasks}
           inputText={inputText}
           setInputText={setInputText}
+          setStatus={setStatus}
         />
       </div>
       <div>
-
         <List setTasks={setTasks} tasks={tasks} />
-
-
       </div>
     </div>
   );

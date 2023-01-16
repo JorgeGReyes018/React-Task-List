@@ -14,6 +14,10 @@ export default function Form({ inputText, setInputText, tasks, setTasks }) {
     ]);
     setInputText("");
   };
+
+  const statusHandler = (ev) => {
+    console.log(ev.target.value);
+  };
   return (
     <form action="#" method="GET">
       <h1>New Task</h1>
@@ -33,7 +37,7 @@ export default function Form({ inputText, setInputText, tasks, setTasks }) {
         </button>
       </div>
       <div className="select">
-        <select name="tasks" className="tasks-filter">
+        <select onChange={statusHandler} name="tasks" className="tasks-filter">
           <option value="all">All Tasks</option>
           <option value="completed">Completed Tasks</option>
           <option value="incomplete">Incomplete Tasks</option>
