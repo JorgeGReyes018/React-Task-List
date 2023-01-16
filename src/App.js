@@ -15,14 +15,17 @@ function App() {
       </header>
       <div>
         <Form
-          inputText={inputText}
-          tasks={tasks}
           setTasks={setTasks}
+          tasks={tasks}
+          inputText={inputText}
           setInputText={setInputText}
         />
       </div>
       <div>
-        <List tasks={tasks} />
+
+        <List setTasks={setTasks} tasks={tasks} />
+
+
       </div>
     </div>
   );

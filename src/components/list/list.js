@@ -1,12 +1,18 @@
 import React from "react";
 import Task from "../task/task";
 
-export default function List(props) {
+export default function List({ setTasks, tasks }) {
   return (
     <div>
       <ul className="task-list">
-        {props.tasks.map((task) => (
-          <Task key={task.id} text={task.text} id={task.id} />
+        {tasks.map((task) => (
+          <Task
+            setTasks={setTasks}
+            task={task}
+            tasks={tasks}
+            text={task.text}
+            key={task.id}
+          />
         ))}
       </ul>
     </div>

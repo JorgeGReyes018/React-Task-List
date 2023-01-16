@@ -1,24 +1,24 @@
 import React from "react";
 import "./form.css";
 
-export default function Form(props) {
+export default function Form({ inputText, setInputText, tasks, setTasks }) {
   const inputTextHandler = (ev) => {
-    props.setInputText(ev.target.value);
+    console.log(ev.target.value);
+    setInputText(ev.target.value);
   };
   const submitTaskHandler = (ev) => {
     ev.preventDefault();
-    props.setTasks([
-      ...props.tasks,
-      { text: props.inputText, completed: false, id: Math.random() * 100 },
+    setTasks([
+      ...tasks,
+      { text: inputText, completed: false, id: Math.random() * 1000 },
     ]);
-    props.setInputText("");
+    setInputText("");
   };
-
   return (
     <form action="#" method="GET">
       <h1>New Task</h1>
       <input
-        value={props.inputText}
+        value={inputText}
         onChange={inputTextHandler}
         className="inputTask"
         type="text"
@@ -33,7 +33,7 @@ export default function Form(props) {
         </button>
       </div>
       <div className="select">
-        <select name="tasks" className="task-filter">
+        <select name="tasks" className="tasks-filter">
           <option value="all">All Tasks</option>
           <option value="completed">Completed Tasks</option>
           <option value="incomplete">Incomplete Tasks</option>
