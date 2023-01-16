@@ -9,7 +9,7 @@ export default function Form(props) {
     ev.preventDefault();
     props.setTasks([
       ...props.tasks,
-      { task: props.inputText, completed: false, id: Math.random() * 100 },
+      { text: props.inputText, completed: false, id: Math.random() * 100 },
     ]);
     props.setInputText("");
   };
