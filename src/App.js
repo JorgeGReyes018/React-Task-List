@@ -10,6 +10,10 @@ function App() {
   const [status, setStatus] = React.useState("all");
   const [filteredTasks, setFilteredTasks] = React.useState([]);
 
+  React.useEffect(() => {
+    filterHandler();
+  }, [tasks, status]);
+
   const filterHandler = () => {
     switch (status) {
       case "completed":
@@ -39,7 +43,7 @@ function App() {
         />
       </div>
       <div>
-        <List setTasks={setTasks} tasks={tasks} />
+        <List filteredTasks={filteredTasks} setTasks={setTasks} tasks={tasks} />
       </div>
     </div>
   );
