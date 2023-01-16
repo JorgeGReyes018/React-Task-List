@@ -3,20 +3,37 @@ import "./form.css";
 
 export default function Form(props) {
   const inputTextHandler = (ev) => {
-    props.setInputText(e.target.value);
+    props.setInputText(ev.target.value);
+  };
+  const submitTaskHandler = (ev) => {
+    ev.preventDefault();
+    props.setTasks([
+      ...props.tasks,
+      { task: props.inputText, completed: false, id: Math.random() * 100 },
+    ]);
+    props.setInputText("");
   };
 
   return (
     <form action="#" method="GET">
       <h1>New Task</h1>
-      <input onChange={inputTextHandler} className="inputTask" type="text" />
+      <input
+        value={props.inputText}
+        onChange={inputTextHandler}
+        className="inputTask"
+        type="text"
+      />
       <div>
-        <button className="addTaskBtn" type="submit">
+        <button
+          onClick={submitTaskHandler}
+          className="addTaskBtn"
+          type="submit"
+        >
           Add Task
         </button>
       </div>
       <div className="select">
-        <select name="todos" className="todo-filter">
+        <select name="tasks" className="task-filter">
           <option value="all">All Tasks</option>
           <option value="completed">Completed Tasks</option>
           <option value="incomplete">Incomplete Tasks</option>
