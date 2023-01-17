@@ -1,17 +1,41 @@
+html {
+  background-color: rgb(20, 20, 20);
+}
 .App {
   text-align: center;
+  font-family: "Raleway", sans-serif;
 }
-
 .App-header {
-  background-color: #282c34;
+  background-color: rgb(20, 20, 20);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: 1.2rem;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.page {
+  background-color: rgb(60, 60, 60);
+  color: white;
+}
+.profileLink {
+  color: white;
+  text-decoration: none;
+  font-size: 0.8rem;
+  margin-bottom: 30px;
+}
+.profileLink:hover {
+  color: rgb(111, 195, 119);
+  text-decoration: underline;
+}
+footer {
+  background-color: rgb(60, 60, 60);
+}
+.footDiv {
+  width: 80%;
+  padding: 40px 10px;
+  height: 200px;
+  display: flex;
+  margin: auto;
+  background-color: rgb(70, 70, 70);
 }

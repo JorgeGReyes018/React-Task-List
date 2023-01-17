@@ -32,8 +32,14 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>React Task List</h1>
+        <a
+          className="profileLink"
+          href="https://jorgegreyes018.github.io/Project-1-Portfolio/"
+        >
+          Back to Portfolio
+        </a>
       </header>
-      <div>
+      <div className="page">
         <Form
           setTasks={setTasks}
           tasks={tasks}
@@ -45,6 +51,9 @@ function App() {
       <div>
         <List filteredTasks={filteredTasks} setTasks={setTasks} tasks={tasks} />
       </div>
+      <footer>
+        <div className="footDiv"></div>
+      </footer>
     </div>
   );
 }

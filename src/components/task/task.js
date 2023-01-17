@@ -23,12 +23,14 @@ export default function Task({ text, task, setTasks, tasks }) {
       <li className={`taskItem ${task.completed ? "completed" : ""}`}>
         {text}
       </li>
-      <button onClick={doneHandler} className="doneBtn">
-        Done
-      </button>
-      <button onClick={delHandler} className="delBtn">
-        Delete
-      </button>
+      <div className="taskBtns">
+        <button onClick={doneHandler} className="doneBtn tskBtn">
+          Done
+        </button>
+        <button onClick={delHandler} className="delBtn tskBtn">
+          Delete
+        </button>
+      </div>
     </div>
   );
 }

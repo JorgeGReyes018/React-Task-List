@@ -1,0 +1,17 @@
+.listPage {
+  background-color: rgb(60, 60, 60);
+}
+.listBox {
+  background-color: rgb(70, 70, 70);
+  border-top: 2px solid rgb(20, 20, 20);
+  padding: 40px 10px;
+  width: 80%;
+  display: flex;
+  margin: auto;
+}
+.task-list {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding: 0;
+}
