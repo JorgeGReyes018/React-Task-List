@@ -47,12 +47,19 @@
   .task {
     display: flex;
     flex-direction: column;
-    width: 90%;
+    width: 100%;
   }
   .taskItem {
     text-align: center;
+    margin: 0;
   }
   .taskBtns {
     margin: auto;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .task {
+    margin: 0;
+    padding: 10px 0;
   }
 }
