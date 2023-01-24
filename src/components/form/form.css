@@ -38,3 +38,8 @@ form h1 {
   border: 1px black solid;
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
+@media only screen and (max-width: 1024px) {
+  .inputTask {
+    width: 140px;
+  }
+}

@@ -42,3 +42,17 @@
   text-decoration: line-through;
   color: rgb(111, 195, 119);
 }
+
+@media only screen and (max-width: 1024px) {
+  .task {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+  }
+  .taskItem {
+    text-align: center;
+  }
+  .taskBtns {
+    margin: auto;
+  }
+}

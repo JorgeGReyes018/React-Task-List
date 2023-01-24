@@ -34,7 +34,7 @@ function App() {
         <h1>React Task List</h1>
         <a
           className="profileLink"
-          href="https://jorgegreyes018.github.io/Project-1-Portfolio/"
+          href="https://jorgegreyes018.github.io/Portfolio/"
         >
           Back to Portfolio
         </a>
