@@ -13,5 +13,13 @@
   display: flex;
   flex-direction: column;
   margin: auto;
+  min-width: 330px;
   padding: 0;
+}
+@media only screen and (max-width: 720px) {
+  .task-list {
+    min-width: 100px;
+    width: 90%;
+    margin: auto;
+  }
 }
