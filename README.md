@@ -1,3 +1,7 @@
+Active Github Pages link: https://jorgegreyes018.github.io/React-Task-List/
+
+This is my Task-List project using React. You will be able to create a temporary to do list which allows you to mark off completed tasks. You can also sort between completed and incomplete tasks with the drop down menu.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
