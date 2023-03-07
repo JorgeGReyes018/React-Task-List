@@ -44,7 +44,7 @@
   text-decoration: line-through;
   color: rgb(111, 195, 119);
 }
-
+/* MEDIA SECTION */
 @media only screen and (max-width: 1024px) {
   .task {
     display: flex;
